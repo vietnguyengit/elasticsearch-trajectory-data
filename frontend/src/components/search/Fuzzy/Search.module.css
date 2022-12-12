@@ -1,0 +1,12 @@
+.searchbar__container {
+    width: 100%;
+}
+
+.searchbar__search_icon {
+    transform: scale(2);
+    background-color:whitesmoke;
+    border: 2px solid #73AD21;
+    border-color: black;
+    border-radius: 5px;
+    margin-top: 10px;
+}

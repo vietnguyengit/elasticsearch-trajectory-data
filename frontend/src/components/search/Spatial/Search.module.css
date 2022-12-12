@@ -1,0 +1,10 @@
+.tabpanel__container {
+    height: 100%;
+    overflow: visible;
+}
+
+.mapresult__resultpanel {
+    border: "2px solid black";
+    overflow: "hidden";
+    overflow-y: "scroll";
+}
