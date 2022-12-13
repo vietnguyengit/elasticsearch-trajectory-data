@@ -118,7 +118,7 @@ const MapPanel = (props) => {
                     zoom={AppConstant.MAP.DEFAULT_ZOOM}
                     center={AppConstant.MAP.DEFAULT_LOCATION}
                     bootstrapURLKeys={{
-                        key: "AIzaSyDZN_wEcHAl2P2etpUZ9AatisZDPmDKomw",
+                        key: "",
                         libraries: ['places', 'geometry'],
                         language: 'en'
                     }}

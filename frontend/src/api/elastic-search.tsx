@@ -1,6 +1,6 @@
 import AppConstant from '../common/Constant';
 import commons from './commons';
-import {coordinates} from "ol/geom/flat/reverse";
+// import {coordinates} from "ol/geom/flat/reverse";
 
 type TimeRange = {
     from: Date,

@@ -10,6 +10,8 @@ services:
     volumes:
       - ./certs:/usr/share/elasticsearch/config/certs
     user: "0"
+    env_file:
+      - .env
     command: >
       bash -c '        
         if [ ! -f config/certs/ca.zip ]; then
@@ -56,6 +58,8 @@ services:
     volumes:
       - ./elasticsearch-data:/usr/share/elasticsearch/data
       - ./certs:/usr/share/elasticsearch/config/certs
+    env_file:
+      - .env
     environment:
       - ES_JAVA_OPTS=-Xms3g -Xmx4g
       - xpack.security.enabled=true
@@ -90,6 +94,8 @@ services:
     image: docker.elastic.co/kibana/kibana:8.4.3
     restart: always
     user: "1000"
+    env_file:
+      - .env
     volumes:
       - ./certs:/usr/share/kibana/config/certs      
       - ./kibana-data:/usr/share/kibana/data
@@ -120,6 +126,8 @@ services:
     container_name: enterprise-search
     depends_on:
       - kibana
+    env_file:
+      - .env
     restart: always
     user: "1000"
     image: docker.elastic.co/enterprise-search/enterprise-search:8.4.3
@@ -150,6 +158,18 @@ services:
       interval: 10s
       timeout: 10s
       retries: 120
+
+  frontend:
+    image: frontend:latest
+    container_name: frontend
+    depends_on:
+      - enterprisesearch
+    build:
+      context: ./frontend
+    environment:
+      - DANGEROUSLY_DISABLE_HOST_CHECK=true
+    ports:
+      - "80:3000"
 
 volumes:
   enterprisesearch-data:

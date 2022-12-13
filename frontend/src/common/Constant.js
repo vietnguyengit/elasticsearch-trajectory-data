@@ -13,7 +13,7 @@ const AppConstant = {
     // The real host is set package.json proxy attribute this can avoid CORS error
     OPENSEARCH_URL: '',
     GEONETWORK_SEARCH_URL: '/gn-records/',
-    ELASTICSEARCH_URL: 'search-imos-catalog/',
+    ELASTICSEARCH_URL: 'search-soop-trajectory-data/',
 
     MAP : {
         DEFAULT_DEPTH: [300, 1000],

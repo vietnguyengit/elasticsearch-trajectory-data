@@ -102,7 +102,7 @@ const Details = (props) => {
           <div className={style.details__innerbox_content}>
             <h3>Status</h3>
             <ul>
-              {state.value._source.status.map(v => <li>{v}</li>)}
+              {typeof state.value._source.status !== 'string' ? state.value._source.status.map(v => <li>{v}</li>) : state.value._source.status}
             </ul>
           </div>
           <div className={style.details__innerbox_content}>
