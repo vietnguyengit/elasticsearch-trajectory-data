@@ -59,7 +59,6 @@ const VectorTileLayer = (props) => {
         'source-layer': 'hits',
         'filter': ['==', '$type', 'Point'],
         'paint': {
-          // Make circles larger as the user zooms from z12 to z22.
           'circle-radius': {
             'base': 3,
             'stops': [
@@ -67,7 +66,6 @@ const VectorTileLayer = (props) => {
               [22, 10]
             ]
           },
-          // Color circles by ethnicity, using a `match` expression.
           'circle-color': '#c72c7f',
           "circle-opacity": 0.4
         }
