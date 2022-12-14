@@ -1,0 +1,33 @@
+.details__innerbox_date {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+}
+
+.details__innerbox_map {
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+.details__innerbox_content {
+    margin-left: 20px;
+}
+
+.details__innerbox_box {
+    box-sizing: border-box;
+    margin-left: 20px;
+    border-color: dimgray;
+    border: solid 1px;
+    margin-bottom: 10px;
+}
+
+a:link {
+    color: lightseagreen;
+}
+
+.details__outerbox {
+    flex-grow: 1;
+    width: 95%;
+    margin: auto;
+}
