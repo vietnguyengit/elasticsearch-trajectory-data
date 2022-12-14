@@ -33,7 +33,7 @@ const VectorTileLayer = (props) => {
       // If you use tiles, then return must be pdb (protobuffer)
       const s = {
         type: 'vector',
-        tiles: [`http://ec2-54-253-84-18.ap-southeast-2.compute.amazonaws.com:81/${AppConstant.ELASTICSEARCH_URL}_mvt/geoPolygon/{z}/{x}/{y}`]
+        tiles: [`http://ec2-54-253-84-18.ap-southeast-2.compute.amazonaws.com:8080/${AppConstant.ELASTICSEARCH_URL}_mvt/geoPolygon/{z}/{x}/{y}`]
         // tiles: [`http://localhost:3000/${AppConstant.ELASTICSEARCH_URL}_mvt/geoPolygon/{z}/{x}/{y}`]
       };
 
